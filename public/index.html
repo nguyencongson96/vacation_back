@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #image {
+        width: 300px;
+        aspect-ratio: 2/5;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form" method="post" enctype="multipart/form-data" action="http://localhost:3100/test/route1">
+      <label for="avatar">File</label>
+      <input type="file" id="avatar" name="avatar" />
+      <input type="submit" />
+    </form>
+    <button id="button">Get Image</button>
+    <img
+      id="image"
+      src="https://firebasestorage.googleapis.com/v0/b/vacation-social-media.appspot.com/o/1688027009297-751080%2Fanime-kawaii-girl.jpg?alt=media&token=23ea07f5-1214-49d7-9b3f-30c248e52992"
+    />
+
+    <script>
+      const button = document.getElementById('button');
+      const image = document.getElementById('image');
+      button.onclick = async () => {
+        const result = await fetch('http://localhost:3100/test/64900a40d5e81dd124f23c0b', {
+          method: 'get',
+        }).then(data => data.json());
+        image.src = result.resource;
+        return result;
+      };
+    </script>
+  </body>
+</html>

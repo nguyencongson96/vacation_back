@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+      * {
+        font-size: 16px;
+      }
+      .para{
+        color: #455056;
+        font-size: 16px;
+      }
+      .code{
+        color:#27AF66;
+        font-size:20px;
+        font-weight:bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para" >Hi {{email}},<br>
+    <p class="para">We notice the password for your Travip account was recently changed. If
+      it was you, you can safely disregard this email.</p>
+    <p>Here is your unique reset code:</p>
+    <p class="code">{{token}}</p>
+    <p>Please copy and paste this code into the Travip website to change your password. Problems? Please contact support@travip.com</p>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <style>
+      * { font-size: 16px; } .para { color: #455056; font-size: 16px; } #link {background-color: transparent; border: none;
+      color: #27af66; font-size: 16px; font-weight: bold; padding: 0; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <form action='{{url}}' method='post' target='_blank'>
+      <p class='para'>Hi {{email}}</p>
+      <p class='para'>
+        You registered an account on Travip, before being able to use your account you need to verify that this is your email
+        address by clicking here:
+        <button type='submit' id='link'>Link</button>
+      </p>
+    </form>
+    <p>Problems? Please contact support@travip.com</p>
+    <p>Kind Regards,</p>
+  </body>
+</html>
